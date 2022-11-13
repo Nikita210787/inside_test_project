@@ -1,5 +1,7 @@
 package ru.Inside_test_project.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,8 @@ public class Car {
     @Column(name = "brand", nullable = false)
     private String brand;
 
+    @NotNull
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "my_user_id")
     private User user;
