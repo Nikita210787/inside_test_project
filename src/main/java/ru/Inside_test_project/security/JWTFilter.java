@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
+/**
+ * Filtrd Util.
+ */
 @Component
 public class JWTFilter extends OncePerRequestFilter {
 
@@ -34,8 +36,9 @@ public class JWTFilter extends OncePerRequestFilter {
         String username = null;
         String jwt = null;
 
-        //TODO  "Bearer " заменить на "Bearer_"(между Bearer и полученным токеном должно быть нижнее подчеркивание).
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+        // для проверки в постмане "Bearer_" можно заменить на заменить на "Bearer "(между Bearer и полученным токеном должно быть нижнее подчеркивание по условию ТЗ).
+        // и данный вариант БУДЕТ работать. Но так как в постмане нельзя(или я не нашел) изменять префикс "Bearer " пишу об это тут.
+        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer_")) {
             jwt = authorizationHeader.substring(7);
             //если подпись не совпадает с вычисленной, то SignatureException
             //если подпись некорректная (не парсится) то MalformedJwtException

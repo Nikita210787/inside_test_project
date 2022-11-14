@@ -9,6 +9,10 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * Table Message . One user can reference on many message.
+ * Many message can reference on one user.
+ */
 @Getter
 @Setter
 @Access(AccessType.FIELD)

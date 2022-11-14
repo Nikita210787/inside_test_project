@@ -11,7 +11,7 @@ import java.sql.SQLException;
 @Slf4j
 public class AppConfig {
 
-        
+    // we need create h2Server for job with H2 DB
             @Bean(initMethod = "start", destroyMethod = "stop")
     public Server h2Server() throws SQLException {
                 log.info("Start H2 TCP server");

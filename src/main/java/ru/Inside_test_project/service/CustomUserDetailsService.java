@@ -17,6 +17,10 @@ import javax.persistence.EntityNotFoundException;
 public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private MyUserRepository dao;
+
+    /**
+     * return userDetails for user by userName.
+     */
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         log.info("Load User by name");

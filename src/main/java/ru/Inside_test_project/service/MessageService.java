@@ -24,6 +24,12 @@ public class MessageService {
     @Autowired
     MessageRepository messageRepository;
 
+    /**
+     *  if messageDTO = "history 10" return ten last messages.
+     * @param messageDTO
+     * @return  HTTP status 201 and List Message with one created message.
+     */
+
     public ResponseEntity<List<Message>> createMessage(MessageDTO messageDTO) {
         log.info("created message");
         User user= myUserRepository.findByName(messageDTO.name()).orElseThrow( () -> new EntityNotFoundException("User with such name not exist"));
@@ -37,8 +43,11 @@ public class MessageService {
         lmONe.add(newmessage);
         return ResponseEntity.status(201).body(lmONe);
     }
+    /**
+     * @return  HTTP status 200 and 10 List Message from DB.
+     */
+
     public ResponseEntity<List<Message>> getTenLastMessage(){
-        //в случае успешной проверки токена отправить отправителю 10 последних сообщений из БД
         List<Message> lm = messageRepository.getTenLastMessage();
         return ResponseEntity.status(200).body(lm);
     }

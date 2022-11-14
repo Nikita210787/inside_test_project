@@ -12,6 +12,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Table Message . One user can reference on many message.
+ * Many message can reference on one user.
+ */
 @Getter
 @Setter
 @Entity

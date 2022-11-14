@@ -9,8 +9,10 @@ import java.util.List;
 
 @Repository
 public interface MessageRepository extends JpaRepository<Message, Long> {
-    //TODO get last 10
-    @Query("SELECT m FROM Message m")
+    /**
+     * @return ten last message from DB.
+     */
+    @Query(value = "SELECT * FROM message ORDER BY ID DESC LIMIT 10", nativeQuery = true)
     List<Message> getTenLastMessage();
 }
 

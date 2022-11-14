@@ -25,6 +25,10 @@ public class JWTUtil {
     @Value("${jwt.sessionTime}")
     private long sessionTime;
 
+    /**
+     * @param userDetails
+     * @return generated token
+     */
     // генерация токена (кладем в него имя пользователя и authorities)
     public String generateToken(UserDetails userDetails) {
         log.info("generateToken");
