@@ -16,3 +16,7 @@ spring:
 jwt:
   sessionTime: 120000000
   secret: secret_key
+logging:
+  level:
+    root: WARN
+    ru.restaurant_voting: DEBUG

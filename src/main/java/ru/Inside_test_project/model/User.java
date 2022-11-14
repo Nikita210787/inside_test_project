@@ -25,8 +25,8 @@ public class User {
     @Column(name = "id", nullable = false)
     long id;
 
-    @Column(name = "login", unique = true, nullable = false)
-    private String login;
+    @Column(name = "name", unique = true, nullable = false)
+    private String name;
 
     @Column(name = "password", nullable = false)
     private String password;
@@ -37,6 +37,6 @@ public class User {
     @JsonManagedReference
     @OnDelete(action = OnDeleteAction.CASCADE)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    private List<Car> cars = new ArrayList<>();
+    private List<Message> messages = new ArrayList<>();
 
 }

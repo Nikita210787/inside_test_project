@@ -15,15 +15,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "car")
-public class Car {
+@Table(name = "message")
+public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     long id;
 
-    @Column(name = "brand", nullable = false)
-    private String brand;
+    @Column(name = "message", nullable = false)
+    private String message;
 
     @NotNull
     @JsonBackReference

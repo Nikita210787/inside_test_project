@@ -26,18 +26,6 @@ public class AuthenticationController {
     @Autowired
     private JWTUtil jwtTokenUtil;
 
-    /*
-    for request HTTP client example
-    POST http://localhost:8080/authenticate
-    Content-Type: application/json
-
-    {"name":"admin",
-    "password":"password"
-    }
-
-    https://jwt.io/
-    */
-
     @PostMapping("/authenticate")
     @ResponseStatus(HttpStatus.OK)
     public AuthResponse createAuthenticationToken(@RequestBody AuthRequest authRequest) {
@@ -48,7 +36,7 @@ public class AuthenticationController {
         } catch (BadCredentialsException e) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Имя или пароль неправильны", e);
         }
-        // при создании токена в него кладется username как Subject и список authorities как кастомный claim
+        // при создании токена в него кладется NAME как Subject и список authorities как кастомный claim
         String jwt = jwtTokenUtil.generateToken((UserDetails) authentication.getPrincipal());
 
         return new AuthResponse(jwt);
