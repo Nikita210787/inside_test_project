@@ -32,3 +32,6 @@ curl -X POST http://localhost:8080/authenticate --header Content-Type:applicatio
 curl -X POST http://localhost:8080/message -H "Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2ODYzNTc1MCwiaWF0IjoxNjY4NTE1NzUwLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4ifQ.cyZMrTCPBwfss2pgfD6N8DJaKK3xCTMSo8kk1NF6Kio" -H Content-Type:application/json --data-raw "{\"name\":\"admin\",\"message\":\"any message\"}"
 <br><br>POST localhost:8080/message("history 10")<br>
 curl -X POST http://localhost:8080/message -H "Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2ODYzNTc1MCwiaWF0IjoxNjY4NTE1NzUwLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4ifQ.cyZMrTCPBwfss2pgfD6N8DJaKK3xCTMSo8kk1NF6Kio" -H Content-Type:application/json --data-raw "{\"name\":\"admin\",\"message\":\"history 10\"}"
+<br><br>
+GET http://localhost:8080/admin <br>
+curl -X GET http://localhost:8080/admin -H "Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2ODYzODIwNSwiaWF0IjoxNjY4NTE4MjA1LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4ifQ.ahE4LC3DkdaQbMesuozo_nff4liGwEF-sv94zgp4tvY"
