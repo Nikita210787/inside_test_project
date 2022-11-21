@@ -1,0 +1,16 @@
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\security\JWTUtil.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\controller\AuthenticationController.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\repository\MyUserRepository.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\dto\MessageDTO.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\security\AuthResponse.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\MyApp.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\config\AppConfig.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\model\Message.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\repository\MessageRepository.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\security\AuthRequest.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\security\JWTFilter.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\security\SecurityConfig.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\service\CustomUserDetailsService.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\model\User.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\service\MessageService.java
+C:\Users\Nik\IdeaProjects\Inside_test_project\src\main\java\ru\Inside_test_project\controller\MessageController.java

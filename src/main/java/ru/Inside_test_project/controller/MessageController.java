@@ -41,7 +41,7 @@ public class MessageController {
     }
 
     /**
-     * authorized user with role admin and user can GetMapping request.
+     * authorized user with role admin and user can GetMapping request and return "User".
      */
     @GetMapping("/user")
     public String user() {
@@ -49,7 +49,7 @@ public class MessageController {
     }
 
     /**
-     * authorized user with role admin can GetMapping request.
+     * authorized user with role admin can GetMapping request and return "Admin".
      */
     @GetMapping("/admin")
     public String admin() {
