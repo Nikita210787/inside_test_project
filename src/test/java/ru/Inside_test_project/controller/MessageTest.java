@@ -6,6 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import ru.Inside_test_project.AbstractTest;
 import ru.Inside_test_project.MatcherFactory;
 import ru.Inside_test_project.security.JWTUtil;
 
@@ -17,9 +18,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.Inside_test_project.MatcherFactory.Matcher.getContent;
-import static ru.Inside_test_project.controller.TestDataUtil.*;
+import static ru.Inside_test_project.controller.TestDataControllersUtil.*;
 
-class MessageControllerTest extends AbstractControllerTest {
+class MessageTest extends AbstractTest {
     @Autowired
     JWTUtil jwtUtil;
     /**
@@ -53,6 +54,11 @@ class MessageControllerTest extends AbstractControllerTest {
                 .andExpect(status().isOk())
                 .andReturn();
     }
+
+    /**
+     * Try get Unauthorized user.
+     * throws Exception
+     */
     @Test
     void getUnauthorized() throws Exception {
         perform(MockMvcRequestBuilders.get( "/user"))

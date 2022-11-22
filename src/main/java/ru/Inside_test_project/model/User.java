@@ -43,4 +43,10 @@ public class User {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Message> messages = new ArrayList<>();
 
+    public User(String name, String password, String role, List<Message> messages) {
+        this.name = name;
+        this.password = password;
+        this.role = role;
+        this.messages = messages;
+    }
 }
