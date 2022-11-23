@@ -23,7 +23,6 @@ public class MessageController {
      * If token is valid, message from user add in DB, return List<Message> with one reseived message , HTTP status 201.
      * if message = "history 10" @return List<Message> , HTTP status 200.
      *
-     * @param messageDTO
      * @return List<Message> , HTTP status.
      */
     @PostMapping("/message")
@@ -45,7 +44,7 @@ public class MessageController {
      */
     @GetMapping("/user")
     public String user() {
-        return "User";
+        return "user";
     }
 
     /**
@@ -53,7 +52,7 @@ public class MessageController {
      */
     @GetMapping("/admin")
     public String admin() {
-        return "Admin";
+        return "admin";
     }
 
 
